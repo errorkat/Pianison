@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pianison</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/myStyle.css" />
+    <link rel="stylesheet" href="/css/opening.css">
+</head>
+
+<body>
+    <div class="containerCharacter">
+        <div class="position-relative d-flex justify-content-center">
+            <img class="img-fluid character1" src="/img/Character_NoBG.png" alt="character">
+            <img class="halo1" src="img/halo1.svg" alt="halo">
+            <img class="halo2" src="img/halo2.svg" alt="halo">
+        </div>
+        <div class="conversationBox" onclick="revealNextString()">
+            <img src="img/conversationBox.svg" alt="conversation box">
+            <h3>Lyra</h3>
+            <p id="conversation"></p>
+        </div>
+        <div class="triangle-up"></div>
+    </div>
+
+    <audio id="backgroundAudio" loop>
+        <source src="/media/audio/bgm2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="muteButton" class="mute">
+        <div class="playing">
+            <span class="playing__bar playing__bar1 bar"></span>
+            <span class="playing__bar playing__bar2 bar"></span>
+            <span class="playing__bar playing__bar3 bar"></span>
+        </div>
+    </button>
+    
+    <script src="/js/conversation.js"></script>
+</body>
+
+</html>

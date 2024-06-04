@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play</title>
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/myStyle.css" />
+  <link rel="stylesheet" href="/css/pianoStyle.css">
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="container-fluid px-5 py-3">
+      <a class="navbar-brand fontRye greyColor" href="index.html">PIANISON</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvasFull neutralBGColor" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body center-element">
+          <ul class="navbar-nav fontRye justify-content-center text-center pt-5">
+            <li class="nav-item">
+              <a class="nav-link greyColor py-3" href="/play.html">PLAY</a>
+              <hr class="customLine">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link greyColor py-3" href="/learn.html">LEARN</a>
+              <hr class="customLine">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link greyColor py-3" href="/explore.html">EXPLORE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="intro">
+          <a href="pianison.html"><p class="fontRye introtext">Intro</p></a>
+          <a href="index.html"><p class="fontRye introtext">Homepage</p></a>
+          <a href="music-sheet.html"><p class="fontRye introtext">Music Sheet</p></a>
+        </div>
+        <p class="fontRye copyright">© 2024 Pianison</p>
+      </div>
+    </div>
+  </nav>
+
+  <!-- viewport -->
+  <div class="container viewportContainer">
+    <div class="row d-flex justify-content-center">
+      <div class="music-sheet-container">
+        <div class="music-sheet">
+          <img id="music-sheet" src="" alt="music sheet" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid px-0 sticky-bottom">
+    <div class="wrapper">
+      <header>
+        <div class="column volume-slider">
+          <span>Volume</span><input type="range" min="0" max="1" value="0.5" step="any">
+        </div>
+        <div class="column keys-checkbox">
+          <span>Show Keys</span><input type="checkbox" checked>
+        </div>
+      </header>
+      <ul class="piano-keys justify-content-center ps-0 mb-0">
+        <li class="deco"></li>
+        <li class="key white" data-key="z"><span>z</span></li>
+        <li class="key black" data-key="Z"><span>Z</span></li>
+        <li class="key white" data-key="x"><span>x</span></li>
+        <li class="key black" data-key="X"><span>X</span></li>
+        <li class="key white" data-key="c"><span>c</span></li>
+        <li class="key white" data-key="v"><span>v</span></li>
+        <li class="key black" data-key="V"><span>V</span></li>
+        <li class="key white" data-key="b"><span>b</span></li>
+        <li class="key black" data-key="B"><span>B</span></li>
+        <li class="key white" data-key="n"><span>n</span></li>
+        <li class="key black" data-key="N"><span>N</span></li>
+        <li class="key white" data-key="m"><span>j</span></li>
+
+        <li class="key white" data-key="a"><span>a</span></li>
+        <li class="key black" data-key="A"><span>A</span></li>
+        <li class="key white" data-key="s"><span>s</span></li>
+        <li class="key black" data-key="S"><span>S</span></li>
+        <li class="key white" data-key="d"><span>d</span></li>
+        <li class="key white" data-key="f"><span>f</span></li>
+        <li class="key black" data-key="F"><span>F</span></li>
+        <li class="key white" data-key="g"><span>g</span></li>
+        <li class="key black" data-key="G"><span>G</span></li>
+        <li class="key white" data-key="h"><span>h</span></li>
+        <li class="key black" data-key="H"><span>H</span></li>
+        <li class="key white" data-key="j"><span>j</span></li>
+
+        <li class="key white" data-key="q"><span>q</span></li>
+        <li class="key black" data-key="Q"><span>Q</span></li>
+        <li class="key white" data-key="w"><span>w</span></li>
+        <li class="key black" data-key="W"><span>W</span></li>
+        <li class="key white" data-key="e"><span>e</span></li>
+        <li class="key white" data-key="r"><span>r</span></li>
+        <li class="key black" data-key="R"><span>R</span></li>
+        <li class="key white" data-key="t"><span>t</span></li>
+        <li class="key black" data-key="T"><span>T</span></li>
+        <li class="key white" data-key="y"><span>y</span></li>
+        <li class="key black" data-key="Y"><span>Y</span></li>
+        <li class="key white" data-key="u"><span>u</span></li>
+
+        <li class="key white" data-key="1"><span>1</span></li>
+        <li class="key black" data-key="!"><span>!</span></li>
+        <li class="key white" data-key="2"><span>2</span></li>
+        <li class="key black" data-key="@"><span>@</span></li>
+        <li class="key white" data-key="3"><span>3</span></li>
+        <li class="key white" data-key="4"><span>4</span></li>
+        <li class="key black" data-key="$"><span>$</span></li>
+        <li class="key white" data-key="5"><span>5</span></li>
+        <li class="key black" data-key="%"><span>%</span></li>
+        <li class="key white" data-key="6"><span>6</span></li>
+        <li class="key black" data-key="^"><span>^</span></li>
+        <li class="key white" data-key="7"><span>7</span></li>
+        <li class="deco"></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sideButton d-flex flex-column ms-1">
+    <button id="toggleNavbarBtn" class="mb-3"><img src="/img/menu.png" alt="toggle menu"></button>
+    <button id="toggleFullscreenBtn" class="mb-3"><img src="/img/fullscreen.png" alt="fullscreen menu"></button>
+    <button id="toggleDownload" class="mb-3"><img src="/img/download.png" alt="download"></button>
+  </div>
+
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/toggleBtn.js"></script>
+  <script src="/js/piano.js"></script>
+</body>
+
+</html>

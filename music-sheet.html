@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Sheet</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/myStyle.css" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="container-fluid px-5 py-3">
+          <a class="navbar-brand fontRye greyColor" href="index.html">PIANISON</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvasFull neutralBGColor" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body center-element">
+              <ul class="navbar-nav fontRye justify-content-center text-center pt-5">
+                <li class="nav-item">
+                  <a class="nav-link greyColor py-3" href="/play.html">PLAY</a>
+                  <hr class="customLine">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link greyColor py-3" href="/learn.html">LEARN</a>
+                  <hr class="customLine">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link greyColor py-3" href="/explore.html">EXPLORE</a>
+                </li>
+              </ul>
+            </div>
+            <div class="intro">
+              <a href="pianison.html"><p class="fontRye introtext">Intro</p></a>
+              <a href="index.html"><p class="fontRye introtext">Homepage</p></a>
+              <a href="music-sheet.html"><p class="fontRye introtext">Music Sheet</p></a>
+            </div>
+            <p class="fontRye copyright">© 2024 Pianison</p>
+          </div>
+        </div>
+      </nav>
+
+    <!-- body-->
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-6 col-md-3 d-flex justify-content-center align-items-center ">
+                <a href="#" data-image="/Suzume.png" class="image-link cardShadow" style="position: relative; display: inline-block;">
+                    <img src="/img/Card.png" alt="card background" class="img-fluid" />
+                    <h3 class="text-center cardStyle">Suzume</h3>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-3 d-flex justify-content-center align-items-center ">
+                <a href="#" data-image="/AlwaysWithMe.png" class="image-link cardShadow" style="position: relative; display: inline-block;">
+                    <img src="/img/Card.png" alt="card background" class="img-fluid" />
+                    <h3 class="text-center cardStyle">Always With Me</h3>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center align-items-center ">
+                <a href="#" style="position: relative; display: inline-block;" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop3">
+                    <img src="/img/Card.png" alt="card background" class="img-fluid cardShadow" />
+                    <h3 class="text-center cardStyle">Idol</h3>
+                </a>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center align-items-center ">
+                <a href="#" style="position: relative; display: inline-block;" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop4">
+                    <img src="/img/Card.png" alt="card background" class="img-fluid cardShadow" />
+                    <h3 class="text-center cardStyle">Freedom</h3>
+                </a>
+            </div>
+        </div>
+
+
+        
+        <script src="/js/bootstrap.js"></script>
+        <script>
+          document.querySelectorAll('.image-link').forEach(link => {
+              link.addEventListener('click', function(event) {
+                  event.preventDefault();
+                  const image = this.getAttribute('data-image');
+                  window.location.href = `/play-sheet.html?image=${image}`;
+              });
+          });
+      </script>
+</body>
+
+</html>

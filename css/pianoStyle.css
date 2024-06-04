@@ -1,0 +1,134 @@
+.wrapper {
+  margin-bottom: 0;
+  background: #46423f;
+}
+
+.wrapper header {
+  padding: 15px 150px;
+  display: flex;
+  color: #d2c8c6;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h2 {
+  font-size: 1.6rem;
+}
+
+header .column {
+  display: flex;
+  align-items: center;
+}
+
+header span {
+  font-family: 'crimson', serif;
+  margin-right: 15px;
+  font-size: 1.19rem;
+}
+
+header input {
+  outline: none;
+  border-radius: 30px;
+}
+
+.volume-slider input {
+  accent-color: #d2c8c6;
+}
+
+.keys-checkbox input {
+  height: 30px;
+  width: 60px;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  background: #d2c8c6;
+}
+
+.keys-checkbox input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #46423f;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.keys-checkbox input:checked::before {
+  left: 35px;
+  background: #46423f;
+}
+
+.piano-keys {
+  display: flex;
+  list-style: none;
+}
+
+.piano-keys .key {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.piano-keys .black {
+  z-index: 2;
+  width: 30px;
+  height: 95px;
+  margin: 0 -15px 0 -15px;
+  border: 1px solid #1a1921;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#46423f, #46423f);
+}
+
+.piano-keys .black.active {
+  box-shadow: inset -5px -10px 10px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom, #1a1921, #1a1921);
+}
+
+.piano-keys .white {
+  height: 160px;
+  width: 50px;
+  border-bottom-left-radius: 8px;
+  border: 1px solid #1a1921;
+  background: linear-gradient(#b9b497 96%, #6b6858 4%);
+}
+
+.piano-keys .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #6b6858 0%, #6b6858 100%);
+}
+
+.piano-keys .key span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  color: #1a1921;
+  font-size: 1.13rem;
+  text-align: center;
+}
+
+.piano-keys .key.hide span {
+  display: none;
+}
+
+.piano-keys .black span {
+  bottom: 13px;
+  color: #d2c8c6;
+}
+
+.sticky-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.deco {
+  height: 180px;
+  width: 140px;
+  border: 1px solid #1a1921;
+  background: linear-gradient(#b9b497 96%, #6b6858 4%);
+}
